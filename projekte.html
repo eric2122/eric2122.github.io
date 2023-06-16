@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meine Projekte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2, p {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #4682B4;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 4px;
+        }
+        a {
+            display: inline-block;
+            color: #fff;
+            background-color: #4682B4;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #5A9;
+        }
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #4682B4;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div id="progressBar"></div>
+    <div class="container">
+        <h1>Meine Projekte</h1>
+        <ul>
+            <li>
+                <h2>Projekt A: Weiterbildung zum Cloud-Architekt bei Techstarter GmbH</h2>
+                <p>In diesem Projekt habe ich umfangreiche Kenntnisse in Cloud-Computing, Architektur und Sicherheit erworben. Ich habe mehrere Anwendungen in der Cloud bereitgestellt und gemanagt.</p>
+            </li>
+            <li>
+                <h2>Projekt B: Eigene Website erstellen</h2>
+                <p>Ich habe meine persönliche Portfolio-Website von Grund auf neu erstellt, indem ich HTML, CSS und JavaScript verwendet habe. In diesem Projekt konnte ich meine Webentwicklungsfähigkeiten verbessern.</p>
+            </li>
+            <li>
+                <h2>Projekt C: Sport</h2>
+                <p>Als begeisterter Sportler habe ich ein webbasiertes Tool zur Verfolgung meiner Fitnessziele entwickelt. Dieses Projekt gab mir die Möglichkeit, meine Fähigkeiten in Datenanalyse und UI-Design zu verbessern.</p>
+            </li>
+            <!-- Fügen Sie hier weitere Projekte hinzu -->
+        </ul>
+        <a href="index.html">Zurück zur Startseite</a>
+    </div>
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>
+
